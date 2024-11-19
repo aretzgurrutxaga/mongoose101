@@ -28,6 +28,11 @@
             const data = await response.json();
             document.getElementById('newIkasle').innerText = JSON.stringify(data, null, 2);
         }
+
+        async function deleteIkasle() {
+            const id = document.getElementById('ikasleID').value;
+            
+        }
     </script>
 </head>
 <body>
@@ -49,5 +54,12 @@
         <button type="submit">Create</button>
     </form>
     <pre id="newIkasle"></pre>
+    <h3>Delete Ikasle</h3>
+    <form onsubmit="event.preventDefault(); deleteIkasle();">
+        <label for="izena">Ikasle ID:</label>
+        <input type="text" id="ikasleID" name="ikasleID" required>
+        <br>
+        <button type="submit">Delete</button>
+    </form>
 </body>
 </html>

@@ -31,4 +31,8 @@ exports.getIkasleById = async (req, res, next) => {
     }
 };
 
+exports.deleteIkasle = async (req ,res ,next) => {
+    
+}
+
 // Gehitu beste kontroladoreak...
