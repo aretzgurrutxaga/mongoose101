@@ -42,8 +42,7 @@ exports.deleteIkasleById = async (req, res, next) => {
         next(error);
     }
 }
-
-exports.updateIkasleById = async (req, res, next) => {
+exports.updateIkasleById = async (req, res, next) => {  
     try {
         const ikasle = await Ikasle.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
         if (!ikasle) {
@@ -53,6 +52,6 @@ exports.updateIkasleById = async (req, res, next) => {
     } catch (error) {
         next(error);
     }
-};
+}
 
 // Gehitu beste kontroladoreak...
